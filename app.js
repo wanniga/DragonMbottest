@@ -8,6 +8,7 @@ setInterval(() => timechk(), 10000);
 function timechk() {
     aler1()
     aler2()
+    aler3()
 }
 
 function aler1() {
@@ -27,6 +28,16 @@ function aler2() {
 
     // if (m == 42 && s <= 10) { sendText15() }                //แก้เวลาตรงนี้ สำหรับข้อความ "อีก 15 บอสโลกเกิด"   แจ้งเตือน .45 น
     if (h == 12 && m == 15 && s <= 10) { sendText15() }     //แจ้งเตือนตอนเวลา 16.45 น
+
+}
+
+function aler3() {
+    var h = thtime().h
+    var m = thtime().m
+    var s = thtime().s
+
+    // if (m ==  && s <= 10) { sendText() }                   //แก้เวลาตรงนี้ สำหรับข้อความ "วอร์"  แจ้งเตือน .00 น
+    if (h == 19 && m == 09 && s <= 10) { sendText1() }        //แจ้งเตือนตอนเวลา 17.00 น
 
 }
 
@@ -53,6 +64,28 @@ function sendText() {
 }
 
 function sendText15() {
+    request({
+        method: 'POST',
+        uri: 'https://notify-api.line.me/api/notify',
+        header: {
+            'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        auth: {
+            bearer: TOKEN, //token
+        },
+        form: {
+            message: 'อีก 15 นาที บอสโลกจะเกิดแล้วนะ !!!', //ข้อความที่จะส่ง
+        },
+    }, (err, httpResponse, body) => {
+        if (err) {
+            console.log(err)
+        } else {
+            console.log(body)
+        }
+    })
+}
+
+function sendText1() {
     request({
         method: 'POST',
         uri: 'https://notify-api.line.me/api/notify',
