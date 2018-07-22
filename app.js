@@ -1,7 +1,7 @@
 var request = require('request')
 const thtime = require("./thtime")
 
-var TOKEN = process.env.BOT_TOKEN
+var TOKEN = process.env.BOT_TOKEN1
 
 setInterval(() => timechk(), 10000);
 
@@ -16,7 +16,7 @@ function aler1() {
     var s = thtime().s
 
     // if (m ==  && s <= 10) { sendText() }                   //แก้เวลาตรงนี้ สำหรับข้อความ "บอสโลกเกิดแล้ว"  แจ้งเตือน .00 น
-    if (h == 18 && m == 31 && s <= 10) { sendText() }        //แจ้งเตือนตอนเวลา 17.00 น
+    if (h == 18 && m == 44 && s <= 10) { sendText() }        //แจ้งเตือนตอนเวลา 17.00 น
 
 }
 
