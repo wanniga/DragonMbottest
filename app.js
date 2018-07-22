@@ -37,7 +37,7 @@ function aler3() {
     var s = thtime().s
 
     // if (m ==  && s <= 10) { sendText() }                   //แก้เวลาตรงนี้ สำหรับข้อความ "วอร์"  แจ้งเตือน .00 น
-    if (h == 19 && m == 30 && s <= 10) { sendText1() }        //แจ้งเตือนตอนเวลา 17.00 น
+    if (h == 20 && m == 00 && s <= 10) { sendText1() }        //แจ้งเตือนตอนเวลา 17.00 น
 
 }
 
@@ -96,7 +96,7 @@ function sendText1() {
             bearer: TOKEN, //token
         },
         form: {
-            message: 'เล่นไพ่กัน เล่นไพ่กัน !!!', //ข้อความที่จะส่ง
+            message: 'วอร์จ้าาา !!!', //ข้อความที่จะส่ง
         },
     }, (err, httpResponse, body) => {
         if (err) {
