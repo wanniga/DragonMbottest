@@ -1,7 +1,7 @@
 var request = require('request')
 const thtime = require("./thtime")
 
-var TOKEN = process.env.BOT_TOKEN1
+var TOKEN = process.env.BOT_TOKEN
 
 setInterval(() => timechk(), 10000);
 
@@ -37,7 +37,7 @@ function aler3() {
     var s = thtime().s
 
     // if (m ==  && s <= 10) { sendText() }                   //แก้เวลาตรงนี้ สำหรับข้อความ "วอร์"  แจ้งเตือน .00 น
-    if (h == 19 && m == 12 && s <= 10) { sendText1() }        //แจ้งเตือนตอนเวลา 17.00 น
+    if (h == 19 && m == 30 && s <= 10) { sendText1() }        //แจ้งเตือนตอนเวลา 17.00 น
 
 }
 
@@ -96,7 +96,7 @@ function sendText1() {
             bearer: TOKEN, //token
         },
         form: {
-            message: 'เริ่มวอร์แล้วนะ !!!', //ข้อความที่จะส่ง
+            message: 'เล่นไพ่กัน เล่นไพ่กัน !!!', //ข้อความที่จะส่ง
         },
     }, (err, httpResponse, body) => {
         if (err) {
