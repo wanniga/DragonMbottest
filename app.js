@@ -22,7 +22,7 @@ function alert() {
          sendText(msgz2)                            //บอสโลกเกิดแล้ว
         }
 
-    if (day == 1 && h == 10 && m == 16 && s <= 10) { 
+    if (day == 1 && h == 10 && m == 18 && s <= 10) { 
         sendText(msgz3)                             //ลอกข้อสอบ
     }  
 }
