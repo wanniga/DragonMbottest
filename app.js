@@ -14,13 +14,13 @@ function aler1() {
     var h = thtime().h
     var m = thtime().m
     var s = thtime().s
-    var days = thtime().days
+    var days = thtime().days[1]
 
     // if (m ==  && s <= 10) { sendText() }                   //แก้เวลาตรงนี้ สำหรับข้อความ "บอสโลกเกิดแล้ว"  แจ้งเตือน .00 น
     if  
         (days == [1])
     else
-        (h == 08 && m == 57 && s <= 10) { sendText() }        //แจ้งเตือนตอนเวลา 17.00 น
+        (h == 09 && m == 01 && s <= 10) { sendText() }        //แจ้งเตือนตอนเวลา 17.00 น
 
 }
 
