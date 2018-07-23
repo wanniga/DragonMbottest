@@ -15,33 +15,12 @@ function aler1() {
     var h = thtime().h
     var m = thtime().m
     var s = thtime().s
-
-    // if (m ==  && s <= 10) { sendText() }                   //แก้เวลาตรงนี้ สำหรับข้อความ "บอสโลกเกิดแล้ว"  แจ้งเตือน .00 น
-    if (h == 12 && m == 30 && s <= 10) { sendText() }        //แจ้งเตือนตอนเวลา 17.00 น
-
-}
-
-function aler2() {
-    var h = thtime().h
-    var m = thtime().m
-    var s = thtime().s
-
-    // if (m == 42 && s <= 10) { sendText15() }                //แก้เวลาตรงนี้ สำหรับข้อความ "อีก 15 บอสโลกเกิด"   แจ้งเตือน .45 น
-    if (h == 12 && m == 15 && s <= 10) { sendText15() }     //แจ้งเตือนตอนเวลา 16.45 น
-
-}
-
-function aler3() {
-    var h = thtime().h
-    var m = thtime().m
-    var s = thtime().s
     var day = thtime().day
 
-    // if (m ==  && s <= 10) { sendText() }                   //แก้เวลาตรงนี้ สำหรับข้อความ "บอสโลกเกิดแล้ว"  แจ้งเตือน .00 น
-    if (day == 1 && h == 09 && m == 39 && s <= 10) { sendText1() }        //แจ้งเตือนตอนเวลา 17.00 น
-
+    if (h == 09 && m == 49 && s <= 10) { sendText() }        //แจ้งเตือนตอนเวลา 17.00 น
+    if (h == 09 && m == 49 && s <= 10) { sendText15() }     //แจ้งเตือนตอนเวลา 16.45 น
+    if (day == 1 && h == 09 && m == 49 && s <= 10) { sendText1() //
 }
-
 function sendText() {
     request({
         method: 'POST',
@@ -97,7 +76,7 @@ function sendText1() {
             bearer: TOKEN, //token
         },
         form: {
-            message: 'อีก 15 นาที บอสโลกจะเกิดแล้วนะ !!!', //ข้อความที่จะส่ง
+            message: 'กิจกรรมลอกข้อสอบกิล !!!', //ข้อความที่จะส่ง
         },
     }, (err, httpResponse, body) => {
         if (err) {
