@@ -17,9 +17,9 @@ function aler1() {
     var s = thtime().s
     var day = thtime().day
 
-    if (h == 09 && m == 49 && s <= 10) { sendText() }        //แจ้งเตือนตอนเวลา 17.00 น
-    if (h == 09 && m == 49 && s <= 10) { sendText15() }     //แจ้งเตือนตอนเวลา 16.45 น
-    if (day == 1 && h == 09 && m == 49 && s <= 10) { sendText1() //
+    if (h == 09 && m == 51 && s <= 10) { sendText() }        //แจ้งเตือนตอนเวลา 17.00 น
+    if (h == 09 && m == 52 && s <= 10) { sendText15() }     //แจ้งเตือนตอนเวลา 16.45 น
+    if (day == 1 && h == 09 && m == 53 && s <= 10) { sendText1() //
 }
 function sendText() {
     request({
