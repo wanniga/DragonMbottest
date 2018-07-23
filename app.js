@@ -11,7 +11,7 @@ function alert() {
     var day = thtime().day
     var msgz1 = 'อีก 15 นาที บอสเกิดแล้ว'
     var msgz2 = 'บอสโลกเกิดแล้ว'
-    var msgz3 = 'กิจกรรมลอกข้อสอบกิล :'+day+' '+h+': '+m+' น.' 
+    var msgz3 = 'กิจกรรมลอกข้อสอบกิล \n '+day+' '+h+': '+m+' น.' 
 
     if (h == 12 && m == 15 && s <= 10) {            //เวลา
          sendText(msgz1)                            //อีก 15 นาที บอสเกิดแล้ว
@@ -21,7 +21,7 @@ function alert() {
          sendText(msgz2)                            //บอสโลกเกิดแล้ว
         }
 
-    if (day == 1 && h == 10 && m == 10 && s <= 10) { 
+    if (day == 1 && h == 10 && m == 12 && s <= 10) { 
         sendText(msgz3)                             //ลอกข้อสอบ
     }  
 }
