@@ -10,9 +10,21 @@ function alert() {
     var s = thtime().s
     var day = thtime().day
     var days = thtime().days
+    
+    /**แต่งเวลาให้สวย */
+    if (h < 10) {
+    h = "0" + h;
+    }
+    if (m < 10) {
+    m = "0" + m;
+    }
+    if (s < 10) {
+    s = "0" + s;
+    }
+    
     var msgz1 = 'อีก 15 นาที บอสเกิดแล้ว'
     var msgz2 = 'บอสโลกเกิดแล้ว'
-    var msgz3 = 'กิจกรรมลอกข้อสอบกิล \n '+days+':เวลา '+h+':'+m+' น.' 
+    var msgz3 = 'กิจกรรมลอกข้อสอบกิล \n***'+days+':เวลา '+h+':'+m+' น.***' 
 
     if (h == 12 && m == 15 && s <= 10) {            //เวลา
          sendText(msgz1)                            //อีก 15 นาที บอสเกิดแล้ว
@@ -22,7 +34,7 @@ function alert() {
          sendText(msgz2)                            //บอสโลกเกิดแล้ว
         }
 
-    if (day == 1 && h == 10 && m == 18 && s <= 10) { 
+    if (day == 1 && h == 10 && m == 21 && s <= 10) { 
         sendText(msgz3)                             //ลอกข้อสอบ
     }  
 }
