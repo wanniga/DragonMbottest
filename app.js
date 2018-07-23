@@ -1,7 +1,6 @@
 var request = require('request')
 const thtime = require("./thtime")
 var TOKEN = process.env.BOT_TOKEN1
-var TOKEN = process.env.BOT_TOKEN
 
 setInterval(() => alert(), 10000);
 
@@ -35,7 +34,7 @@ function alert() {
          sendText(msgz2)                            //บอสโลกเกิดแล้ว
         }
 
-    if (day == 1 && h == 10 && m == 25 && s <= 10) { 
+    if (day == 1 && h == 10 && m == 27 && s <= 10) { 
         sendText(msgz3)                             //ลอกข้อสอบ
     }  
 }
