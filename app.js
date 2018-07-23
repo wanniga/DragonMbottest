@@ -1,5 +1,6 @@
 var request = require('request')
 const thtime = require("./thtime")
+var TOKEN = process.env.BOT_TOKEN1
 var TOKEN = process.env.BOT_TOKEN
 
 setInterval(() => alert(), 10000);
