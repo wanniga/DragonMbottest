@@ -1,6 +1,6 @@
 var request = require('request')
 const thtime = require("./thtime")
-var TOKEN = process.env.BOT_TOKEN1
+var TOKEN = process.env.BOT_TOKEN
 
 setInterval(() => alert(), 10000);
 
@@ -22,21 +22,26 @@ function alert() {
     s = "0" + s;
     }
     
-    var msgz1 = 'เตรียมตัว15นาทีบอสจะเกิดแล้วนะ \n** '+days+' : เวลา '+h+':'+m+' น. **'
-    var msgz2 = 'บอสโลกเกิดจ้าาาาาา !! \n** '+days+' : เวลา '+h+':'+m+' น. **'
+    var msgz1 = 'เตรียมตัว15นาทีบอสจะเกิดแล้ว \n** '+days+' : เวลา '+h+':'+m+' น. **'
+    var msgz2 = 'บอสโลกเกิดจ้าาา ลุยยย !! \n** '+days+' : เวลา '+h+':'+m+' น. **'
     var msgz3 = 'กิจกรรมลอกข้อสอบกิล \n** '+days+' : เวลา '+h+':'+m+' น. **' 
+    var msgz4 = 'ถึงเวลาอัพเดทรอบ 11โมง \n** '+days+' : เวลา '+h+':'+m+' น. **'
+    
 
-    if (h == 10 && m == 39 && s <= 10) {            //เวลา
+    if (h == 11 && m == 00 && s <= 10) { 
+        sendText(msgz4)                             //อัพเดทเครื่อง POS
+    } 
+    if (h == 12 && m == 15 && s <= 10) {            //เวลา
          sendText(msgz1)                            //อีก 15 นาที บอสเกิดแล้ว
         }    
 
-    if (h == 10 && m == 30 && s <= 10) {
+    if (h == 12 && m == 30 && s <= 10) {
          sendText(msgz2)                            //บอสโลกเกิดแล้ว
         }
 
-    if (day == 1 && h == 10 && m == 31 && s <= 10) { 
+    if (day == 1 && h == 19 && m == 30 && s <= 10) { 
         sendText(msgz3)                             //ลอกข้อสอบ
-    }  
+    } 
 }
 
 function sendText(msgz) {
