@@ -1,6 +1,6 @@
 var request = require('request')
 const thtime = require("./thtime")
-var TOKEN = process.env.BOT_TOKEN1
+var TOKEN = process.env.BOT_TOKEN
 
 setInterval(() => alert(), 10000);
 
@@ -24,7 +24,7 @@ function alert() {
     
     var msgz1 = 'อีก 15 นาที บอสเกิดแล้ว'
     var msgz2 = 'บอสโลกเกิดแล้ว'
-    var msgz3 = 'กิจกรรมลอกข้อสอบกิล \n***'+days+':เวลา '+h+':'+m+' น.***' 
+    var msgz3 = 'กิจกรรมลอกข้อสอบกิล \n** '+days+' : เวลา '+h+':'+m+' น. **' 
 
     if (h == 12 && m == 15 && s <= 10) {            //เวลา
          sendText(msgz1)                            //อีก 15 นาที บอสเกิดแล้ว
@@ -34,7 +34,7 @@ function alert() {
          sendText(msgz2)                            //บอสโลกเกิดแล้ว
         }
 
-    if (day == 1 && h == 10 && m == 21 && s <= 10) { 
+    if (day == 1 && h == 10 && m == 23 && s <= 10) { 
         sendText(msgz3)                             //ลอกข้อสอบ
     }  
 }
